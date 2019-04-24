@@ -1,0 +1,7 @@
+{
+  "name": "buscaYoutube",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

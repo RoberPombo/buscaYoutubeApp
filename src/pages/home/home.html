@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Buscador Youtube
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar  type="text" [(ngModel)]="valores" (keyup)="buscarYoutube()"></ion-searchbar >
+
+    <ion-list no-padding>
+        <button ion-item *ngFor="let video of videos" (click)="openPlaylist(video.id.videoId)">
+          <ion-thumbnail item-start>
+          <img [src]="video.snippet.thumbnails.default.url">
+        </ion-thumbnail>
+        <h2>{{ video.snippet.title }}</h2>
+        <p>{{ video.snippet.publishedAt | date:'short' }}</p>
+        </button>
+      </ion-list>
+</ion-content>
